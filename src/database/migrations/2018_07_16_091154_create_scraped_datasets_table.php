@@ -13,7 +13,7 @@ class CreateScrapedDatasetsTable extends Migration
     public function up()
     {
         Schema::create('scraped_datasets', function (Blueprint $table) {
-            $table->string('url', 1024)->primary();
+            $table->string('url', 384)->primary();
             $table->string('type');
             $table->string('variant', 40)->index()->nullable();
             $table->json('data');
